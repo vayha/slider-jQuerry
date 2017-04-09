@@ -6,14 +6,17 @@ $(function(){
 
 
 var slider = $('#slider');
-var slideshow = $('.slide-show');
-var slideCount = $('.single-slide').length;
+var slideShow = $('.slide-show');
+var slideCount = $('.single-slide').length; //metoda zwraca ilosc obiektów
 var slideWidth = 100 / slideCount;
 var slideIndex = 0;
 
+slideShow.css('width', slideCount * 100 + '%');    
 
-
-    console.log(slideCount);
+slideShow.find('.single-slide').each(function(index) {
+        $(.single-slide).css('margin-left', slideShow *index + '%');  
+     
+     });
     
 
 });
